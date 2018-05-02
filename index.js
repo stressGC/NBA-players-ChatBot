@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-//const db = require('./pokedex.json');
+const fs = require("fs");
+var db = JSON.parse(fs.readFileSync('dreamTeam.json', 'utf8'));
 
 const app = express();
 app.use(bodyParser.json());
